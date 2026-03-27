@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+<<<<<<< HEAD
 import Sidebar from "@/components/Sidebar";
+=======
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+>>>>>>> 632e4fd082e5751d059ef5c4494fc23850b1867c
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,11 +33,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+<<<<<<< HEAD
       <body className="flex flex-col md:flex-row h-full overflow-hidden bg-slate-50 text-slate-900">
         <Sidebar />
         <main className="flex-1 overflow-y-auto relative min-h-screen">
           {children}
         </main>
+=======
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Analytics />
+        <SpeedInsights />
+>>>>>>> 632e4fd082e5751d059ef5c4494fc23850b1867c
       </body>
     </html>
   );
