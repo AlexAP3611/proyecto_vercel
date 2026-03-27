@@ -35,8 +35,6 @@ export default function RootLayout({
         <main className="flex-1 overflow-y-auto relative min-h-screen">
           {children}
         </main>
-      <body className="min-h-full flex flex-col">
-        {children}
         <Analytics />
         <SpeedInsights />
       </body>
